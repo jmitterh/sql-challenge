@@ -66,3 +66,24 @@ SELECT last_name, COUNT(last_name) AS "count of last_name"
 FROM "Employees"
 GROUP BY last_name
 ORDER BY last_name DESC;
+
+--BONUS
+--Create a histogram to visualize the most common salary ranges for employees.
+SELECT * FROM "Salaries";--using this query to find the most common salary in jupyter notebook
+
+--Create a bar chart of average salary by title.
+SELECT t.title,s.salary
+FROM "Employees" AS e
+INNER JOIN "Salaries" AS s
+ON s.emp_no = e.emp_no
+INNER JOIN "Titles" AS t
+ON t.emp_no = s.emp_no;
+
+SELECT * FROM "Salaries";
+SELECT * FROM "Titles";
+
+--Conclusion
+SELECT * FROM "Employees"
+WHERE emp_no = '499942';
+
+--end
