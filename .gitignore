@@ -1,0 +1,8 @@
+#ignore password credentials page
+sql-challenge\main\db_connection.py
+
+#ignore checkpoints
+sql-challenge\main\.ipynb_checkpoints
+
+#pycache
+sql-challenge\main\__pycache__

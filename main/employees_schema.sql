@@ -1,6 +1,13 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+-- Jean-Paul Mitterhofer
+-- 12-08-2019
+-- DB Schema for Employees_DB
 
+DROP TABLE IF EXISTS "Salaries"
+DROP TABLE IF EXISTS "Titles"
+DROP TABLE IF EXISTS "Emp_Managers"
+DROP TABLE IF EXISTS "Dept_Emp"
+DROP TABLE IF EXISTS "Employees"
+DROP TABLE IF EXISTS "Departments"
 
 CREATE TABLE "Employees" (
     "emp_no" int   NOT NULL,
@@ -79,4 +86,3 @@ REFERENCES "Departments" ("dept_no");
 
 ALTER TABLE "Dept_Manager" ADD CONSTRAINT "fk_Dept_Manager_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employees" ("emp_no");
-
