@@ -1,5 +1,5 @@
 #Credentials to connect to PostgresSQL
 user = 'postgres'
-ps = 'Jpmitter'
+ps = '####################'
 host = 'localhost'
 port = 5432
