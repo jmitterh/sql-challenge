@@ -72,15 +72,11 @@ ORDER BY last_name DESC;
 SELECT * FROM "Salaries";--using this query to find the most common salary in jupyter notebook
 
 --Create a bar chart of average salary by title.
+--using query below in jupyter notebook
 SELECT t.title,s.salary
-FROM "Employees" AS e
-INNER JOIN "Salaries" AS s
-ON s.emp_no = e.emp_no
+FROM "Salaries" AS s
 INNER JOIN "Titles" AS t
 ON t.emp_no = s.emp_no;
-
-SELECT * FROM "Salaries";
-SELECT * FROM "Titles";
 
 --Conclusion
 SELECT * FROM "Employees"
